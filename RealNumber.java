@@ -12,10 +12,7 @@ public class RealNumber{
   public String toString(){
     return ""+getValue();
   }
-  /*
-  *Return true when the values are within 0.001% of eachother.
-  *Special case: if one is exactly zero, the other must be exactly zero.
-  */
+
   public boolean equals(RealNumber other){
     if(other.getValue() == 0){
       if(value == 0){
@@ -36,9 +33,9 @@ public class RealNumber{
   *the sum of this and the other
   */
   public RealNumber add(RealNumber other){
-     //other can be ANY RealNumber, including a RationalNumber
-     //or other subclasses of RealNumber (that aren't written yet)
-     return null;
+    Double x = value + other.getValue();
+    RealNumber result = new RealNumber(x);
+     return result;
   }
 
   /*
